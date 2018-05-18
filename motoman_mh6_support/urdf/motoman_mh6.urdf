@@ -1,0 +1,367 @@
+<robot
+  name="motoman_mh6">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.046898 -4.8744E-05 0.080344"
+        rpy="0 0 0" />
+      <mass
+        value="15.905" />
+      <inertia
+        ixx="0.1326"
+        ixy="2.7799E-05"
+        ixz="-0.0058622"
+        iyy="0.217"
+        iyz="-0.00025873"
+        izz="0.28035" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_s">
+    <inertial>
+      <origin
+        xyz="0.030126 -0.00080303 0.13267"
+        rpy="0 0 0" />
+      <mass
+        value="15.506" />
+      <inertia
+        ixx="0.29659"
+        ixy="-0.015158"
+        ixz="-0.1263"
+        iyy="0.37613"
+        iyz="-0.022927"
+        izz="0.32396" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_s.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_s.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_s"
+    type="revolute">
+    <origin
+      xyz="0 0 0.168"
+      rpy="-2.5402E-20 -2.3828E-20 0.0035466" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_s" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="-2.9670" upper="2.9670" velocity="2.4434"/>
+  </joint>
+  <link
+    name="link_l">
+    <inertial>
+      <origin
+        xyz="0.25767 0.00022443 -0.064536"
+        rpy="0 0 0" />
+      <mass
+        value="5.1683" />
+      <inertia
+        ixx="0.012104"
+        ixy="-0.0002442"
+        ixz="0.012457"
+        iyy="0.21473"
+        iyz="-2.951E-05"
+        izz="0.21607" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_l"
+    type="revolute">
+    <origin
+      xyz="0.15 -0.0835 0.285"
+      rpy="-1.5708 -1.5669 -1.9989E-15" />
+    <parent
+      link="link_s" />
+    <child
+      link="link_l" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="-1.5708" upper="2.70526" velocity="2.2689"/>
+  </joint>
+  <link
+    name="link_u">
+    <inertial>
+      <origin
+        xyz="0.053413 0.095646 -0.097917"
+        rpy="0 0 0" />
+      <mass
+        value="9.6895" />
+      <inertia
+        ixx="0.098855"
+        ixy="-0.026162"
+        ixz="-0.012054"
+        iyy="0.091195"
+        iyz="-0.0048318"
+        izz="0.11565" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_u"
+    type="revolute">
+    <origin
+      xyz="0.614 0 -0.0355"
+      rpy="3.1416 -1.3099E-16 1.5649" />
+    <parent
+      link="link_l" />
+    <child
+      link="link_u" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" lower="-3.0543" upper="4.3633" velocity="2.3561"/>
+  </joint>
+  <link
+    name="link_r">
+    <inertial>
+      <origin
+        xyz="-1.8951E-06 -6.3779E-06 -0.24003"
+        rpy="0 0 0" />
+      <mass
+        value="3.8716" />
+      <inertia
+        ixx="0.060031"
+        ixy="-2.1614E-07"
+        ixz="-1.3069E-06"
+        iyy="0.057245"
+        iyz="-1.1285E-05"
+        izz="0.0077778" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_r"
+    type="revolute">
+    <origin
+      xyz="0.2039 0.155 -0.109"
+      rpy="-1.5708 -0.0040951 1.5708" />
+    <parent
+      link="link_u" />
+    <child
+      link="link_r" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="12.2" lower="-3.1415" upper="3.1415" velocity="4.7123"/>
+  </joint>
+  <link
+    name="link_b">
+    <inertial>
+      <origin
+        xyz="-0.022651 5.4716E-05 -0.030643"
+        rpy="0 0 0" />
+      <mass
+        value="0.56449" />
+      <inertia
+        ixx="0.00044154"
+        ixy="-2.8985E-06"
+        ixz="-2.7432E-06"
+        iyy="0.00094067"
+        iyz="9.2144E-07"
+        izz="0.0010078" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_b.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_b"
+    type="revolute">
+    <origin
+      xyz="0 0.0305 -0.435"
+      rpy="-1.5708 0.0038822 1.2634E-14" />
+    <parent
+      link="link_r" />
+    <child
+      link="link_b" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="14.2" lower="-0.7853" upper="3.9269" velocity="4.7123"/>
+  </joint>
+  <link
+    name="link_t">
+    <inertial>
+      <origin
+        xyz="-0.0016711 8.194E-08 -0.0031936"
+        rpy="0 0 0" />
+      <mass
+        value="0.006345" />
+      <inertia
+        ixx="1.1644E-06"
+        ixy="-7.9965E-12"
+        ixz="-3.2237E-09"
+        iyy="1.3446E-06"
+        iyz="-1.2121E-12"
+        izz="2.4637E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_t.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_mh6_support/meshes/link_t.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_t"
+    type="revolute">
+    <origin
+      xyz="-0.088 -8.8963E-05 -0.030589"
+      rpy="1.5708 0.70401 1.5708" />
+    <parent
+      link="link_b" />
+    <child
+      link="link_t" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="7.3" lower="-6.2831" upper="6.2831" velocity="6.9813"/>
+  </joint>
+</robot>

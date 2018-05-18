@@ -1,0 +1,40 @@
+<package>
+
+  <name>motoman_mh6_moveit_config</name>
+  <version>0.3.0</version>
+  <description>
+     An automatically generated package with all the configuration and launch files for using the motoman_mh6 with the MoveIt! Motion Planning Framework
+  </description>
+  <author email="sinai.aranda@cidesi.edu.mx">SINAI ARANDA</author>
+  <maintainer email="sinai.aranda@cidesi.edu.mx">SINAI ARANDA</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://moveit.ros.org/</url>
+  <url type="bugtracker">https://github.com/ros-planning/moveit/issues</url>
+  <url type="repository">https://github.com/ros-planning/moveit</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>industrial_robot_simulator</run_depend>
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>motoman_mh6</run_depend>
+  <run_depend>moveit_fake_controller_manager</run_depend>
+  <run_depend>moveit_kinematics</run_depend>
+  <run_depend>moveit_planners_ompl</run_depend>
+  <run_depend>moveit_ros_move_group</run_depend>
+  <run_depend>moveit_ros_visualization</run_depend>
+  <run_depend>moveit_ros_warehouse</run_depend>
+  <run_depend>moveit_simple_controller_manager</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>warehouse_ros_mongo</run_depend>
+  <run_depend>xacro</run_depend>
+
+  <build_depend>motoman_mh6</build_depend>
+  
+  <export>
+    <architecture_independent />
+  </export>
+
+</package>

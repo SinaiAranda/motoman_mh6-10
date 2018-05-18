@@ -1,0 +1,10 @@
+<launch>
+  <rosparam command="load" file="$(find motoman_mh6_support)/config/joint_names_motoman_mh6.yaml" />
+
+  <include file="$(find motoman_mh6_moveit_config)/launch/moveit_planning_execution.launch">
+    <arg name="sim"   value="false" />
+    <arg name="robot_ip"   value="195.168.255.10" />
+	</include>
+
+  <node pkg="rosservice" type="rosservice" name="robot_enable" args="call --wait /robot_enable" />
+</launch>

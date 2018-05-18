@@ -1,0 +1,7 @@
+<launch>
+  <rosparam command="load" file="$(find motoman_mh6_support)/config/joint_names_motoman_mh6.yaml" />
+
+  <include file="$(find motoman_mh6_moveit_config)/launch/moveit_planning_execution.launch">
+    <arg name="sim"   value="true" />
+	</include>
+</launch>
